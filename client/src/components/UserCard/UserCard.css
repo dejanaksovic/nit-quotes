@@ -13,5 +13,9 @@
    background-repeat: no-repeat;
    border-radius: 100%;
    aspect-ratio: 1/1;
-   max-width: 20%;
+   max-width: 50px;
+}
+
+.user-text {
+   min-height: 10rem;
 }

@@ -133,3 +133,20 @@ html {
 .fw-bold {
   font-weight: 700;
 }
+
+@media only screen and (min-width: 810px) {
+  html {
+    --padding-section-vertical: 50px;
+    --padding-section-horizontal: 50px;
+
+    --fs-header1: 64px;
+    --fs-header2: 50px;
+    --fs-body: 20px;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  html {
+    --padding-section-horizontal: 100px;
+  }
+}
