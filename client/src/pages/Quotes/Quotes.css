@@ -1,0 +1,32 @@
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   padding-bottom: 1rem;
+}
+
+.pag-item {
+   border-radius: 100%;
+   padding: 0 1ch;
+}
+
+.pag-item:hover {
+   cursor: pointer;
+   background-color: lightgray;
+}
+
+.quotes-container {
+   max-width: max(60vh, 600px);
+   margin: 0 auto;
+   align-items: start;
+}
+
+.quotes-wrapper {
+   min-height: 100vh;
+}
+
+.filter {
+   display: flex;
+   flex-wrap: wrap;
+}

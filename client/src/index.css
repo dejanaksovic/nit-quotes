@@ -29,6 +29,8 @@ html {
   --clr-neutral-900: #FFFFFF;
   --clr-neutral-600: #EFE0B8;
   --clr-neutral-300: #F4E9CD;
+  --clr-error: #cf2129;
+  --clr-success: #50cf21;
 
   /* PADDING */
   --padding-section-vertical: 20px;
@@ -132,6 +134,18 @@ html {
 
 .fw-bold {
   font-weight: 700;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
 }
 
 @media only screen and (min-width: 810px) {

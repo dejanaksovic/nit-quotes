@@ -1,0 +1,10 @@
+.chip-container {
+   width: fit-content;
+   padding: .1rem .2rem; 
+   border-radius: .6rem;
+   border: 1px solid orange;
+}
+
+.chip-container:hover {
+   cursor: pointer;
+}
