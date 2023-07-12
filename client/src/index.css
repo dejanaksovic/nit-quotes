@@ -1,0 +1,135 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap');
+/* RESET */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+button, img {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* INITAL SETUP */
+html {
+  /* COLORS */
+
+  --clr-primary: #031926;
+  --clr-primary-muted: #77ACA2;
+  --clr-neutral-900: #FFFFFF;
+  --clr-neutral-600: #EFE0B8;
+  --clr-neutral-300: #F4E9CD;
+
+  /* PADDING */
+  --padding-section-vertical: 20px;
+  --padding-section-horizontal: 20px;
+  --padding-button-vertical: 10px;
+  --padding-button-horizontal: 20px; 
+
+  /* FONT SIZES */
+  --fs-header1: 32px;
+  --fs-header2: 32px;
+  --fs-header3: 2rem;
+  --fs-body: 16px;
+  --fs-subtitle1: 16px;
+  --fs-subtitle2: 14px;
+
+  /* FONT FAMILIES */
+  --ff-wix: 'Wix Madefor Display', sans-serif;
+  --ff-spline: 'Spline Sans Mono', monospace;
+}
+
+/* CUSTOM HELPER CLASES */
+.clr-primary {
+  color:var(--clr-primary);
+}
+
+.clr-primary-muted {
+  color:var(--clr-primary-muted);
+}
+
+.clr-neutral-300 {
+  color: var(--clr-neutral-300);
+}
+
+.clr-neutral-600 {
+  color: var(--clr-neutral-600);
+}
+
+.clr-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.bg-clr-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-clr-primary-muted {
+  background-color: var(--clr-primary-muted);
+}
+
+.bg-clr-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-clr-neutral-600 {
+  background-color: var(--clr-neutral-600);
+}
+
+.bg-clr-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+
+.ff-wix {
+  font-family: var(--ff-wix);
+}
+
+.ff-spline {
+  font-family: var(--ff-spline);
+}
+
+.fs-header1 {
+  font-size: var(--fs-header1);
+}
+
+.fs-header2 {
+  font-size: var(--fs-header2);
+}
+
+.fs-header3 {
+  font-size: var(--fs-header3);
+}
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.fs-subtitle1 {
+  font-size: var(--fs-body);
+}
+
+.fs-subtitle2 {
+  font-size: var(--fs-subtitle2);
+}
+
+.fw-light {
+  font-weight: 400;
+}
+
+.fw-normal {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}

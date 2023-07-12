@@ -1,0 +1,17 @@
+.user-container {
+   display:flex;
+   flex-direction: column;
+   background-color: var(--clr-neutral-600);
+   border-radius: 20px; 
+   padding: 40px;
+   gap: 20px;
+}
+
+.user-image {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 100%;
+   aspect-ratio: 1/1;
+   max-width: 20%;
+}
