@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import SectionCard from '../../components/SectionCard/SectionCard';
 import UserCard from '../../components/UserCard/UserCard';
 import './Home.css'
 
 const Home = () => {
+   const navigate = useNavigate()
+
    return ( 
       <>
          <section>
@@ -11,8 +14,15 @@ const Home = () => {
                <div className = "section-text">
                   <h1 className='ff-wix clr-primary-muted fs-header1'>Famous Inspirational Quotes</h1>
                   <div className="button-container">
-                     <button className='bg-clr-neutral-900 clr-primary fs-subtitle1 ff-spline button-component'>Get inspired</button>
-                     <button className='bg-clr-primary-muted clr-primary fs-subtitle1 ff-spline button-component'>Share yours</button>
+                     <button className='bg-clr-neutral-900 clr-primary fs-subtitle1 ff-spline button-component'
+                  onClick = { () => {
+                        navigate('/quotes')
+                     } }>Get inspired</button>
+                     <button className='bg-clr-primary-muted clr-primary fs-subtitle1 ff-spline button-component'
+                        onClick={() => {
+                           navigate('/quotes')
+                        }}
+                     >Share yours</button>
                   </div>
                </div>
                <div className="image-container">
@@ -41,10 +51,10 @@ const Home = () => {
          <section>
                <div className='bg-clr-neutral-300'>
                   <div className="section-container bg-clr-neutral-300 third-section">
-                  <SectionCard imgId={"tree-on-body-of-water-near-mountains-KonWFWUaAuk"} title={'Upvoted Quotes'} content={'Check out the most beloved quotes as voted by our vibrant community.'} />
-                  <SectionCard imgId={"Gg7uKdHFb_c"} title={'Recent Additions'} content={'Witness the latest pearls of wisdom our dear adventurers have collected.'}/>
-                  <SectionCard imgId={"DKix6Un55mw"} title={'Personal Favorites'} content={'Discover quotes handpicked for their profound impact on our staff.'}/>
-                  <SectionCard imgId={"7HVHS0idAdY"} title={'Random Finds'} content={'Dive into the abyss of serendipity with these unforeseen treasures.'}/>
+                  <SectionCard searchParams={'upvoted=true'} imgId={"tree-on-body-of-water-near-mountains-KonWFWUaAuk"} title={'Upvoted Quotes'} content={'Check out the most beloved quotes as voted by our vibrant community.'} />
+                  <SectionCard searchParams={'latest=true'}imgId={"Gg7uKdHFb_c"} title={'Recent Additions'} content={'Witness the latest pearls of wisdom our dear adventurers have collected.'}/>
+                  <SectionCard searchParams={''}imgId={"DKix6Un55mw"} title={'Personal Favorites'} content={'Discover quotes handpicked for their profound impact on our staff.'}/>
+                  <SectionCard searchParams={'random=true'}imgId={"7HVHS0idAdY"} title={'Random Finds'} content={'Dive into the abyss of serendipity with these unforeseen treasures.'}/>
                </div>
             </div>
          </section>

@@ -19,6 +19,27 @@
    gap: 20px;
 }
 
+.button-container > button {
+   transition: all .3s linear;
+}
+
+.button-container > button:hover {
+   background-color: var(--clr-primary);
+   color: var(--clr-neutral-900);
+   scale: 1.01;
+}
+
+.button-container > button {
+   transition: all .1s linear;
+}
+
+.button-container > button:hover {
+   cursor: pointer;
+   color: var(--clr-neutral-900);
+   background-color: var(--primary-muted);
+   box-shadow: 0 0 0 5px var(--clr-neutral-900);
+}
+
 .button-component {
    display:grid;
    place-items: center;

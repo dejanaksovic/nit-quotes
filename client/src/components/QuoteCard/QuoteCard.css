@@ -1,0 +1,22 @@
+.quote-container {
+   display:flex;
+   flex-direction: column;
+   padding: 20px 40px;
+   gap: 10px;
+}
+
+.action {
+   display: flex;
+   gap: 1rem;
+}
+
+.icon-container {
+   aspect-ratio: 1/1;
+   padding: .3rem;
+   border-radius: 100%;
+}
+
+.icon-container:hover {
+   cursor: pointer;
+   background-color: lightgrey;
+}

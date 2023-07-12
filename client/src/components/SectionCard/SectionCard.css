@@ -1,6 +1,7 @@
 .section-image-container {
    display: grid;
    gap: 10px;
+   cursor: pointer;
 }
 
 .section-image {
@@ -10,4 +11,9 @@
    background-repeat: no-repeat;
    border-radius: 20px;
    filter: grayscale(1);
+   transition: all .1s linear;
+}
+
+.section-image-container:hover > .section-image {
+   scale: 1.05;
 }
