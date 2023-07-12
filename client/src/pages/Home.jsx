@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer';
 import SectionCard from '../components/SectionCard/SectionCard';
 import UserCard from '../components/UserCard/UserCard';
 import './Home.css'
@@ -36,12 +37,15 @@ const Home = () => {
             </div>
          </section>
          <section>
-            <div className="section-container">
-               <SectionCard imgId={""} title={'Upvoted Quotes'} content={'Check out the most beloved quotes as voted by our vibrant community.'} />
-               <SectionCard imgId={""} title={'Recent Additions'} content={'Witness the latest pearls of wisdom our dear adventurers have collected.'}/>
-               <SectionCard imgId={""} title={'Personal Favorites'} content={'Discover quotes handpicked for their profound impact on our staff.'}/>
-               <SectionCard imgId={""} title={'Random Finds'} content={'Dive into the abyss of serendipity with these unforeseen treasures.'}/>
+            <div className="section-container bg-clr-neutral-300">
+               <SectionCard imgId={"tree-on-body-of-water-near-mountains-KonWFWUaAuk"} title={'Upvoted Quotes'} content={'Check out the most beloved quotes as voted by our vibrant community.'} />
+               <SectionCard imgId={"Gg7uKdHFb_c"} title={'Recent Additions'} content={'Witness the latest pearls of wisdom our dear adventurers have collected.'}/>
+               <SectionCard imgId={"DKix6Un55mw"} title={'Personal Favorites'} content={'Discover quotes handpicked for their profound impact on our staff.'}/>
+               <SectionCard imgId={"7HVHS0idAdY"} title={'Random Finds'} content={'Dive into the abyss of serendipity with these unforeseen treasures.'}/>
             </div>
+         </section>
+         <section>
+            <Footer className={'bg-clr-neutral-300'}/>
          </section>
       </>
    );

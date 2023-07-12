@@ -1,0 +1,12 @@
+.section-image-container {
+   display: grid;
+   gap: 10px;
+}
+
+.section-image {
+   aspect-ratio: 1/1;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 20px;
+}

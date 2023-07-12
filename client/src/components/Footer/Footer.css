@@ -1,0 +1,12 @@
+.footer-container {
+   display: flex;
+   padding: var(--padding-section-vertical) var(--padding-section-horizontal);
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+}
+
+.socials {
+   display: flex;
+   gap: 1rem;
+}
