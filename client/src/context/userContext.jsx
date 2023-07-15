@@ -6,8 +6,13 @@ const userContext = createContext()
 const UserContextProvider = ({children}) => {
    const [user, setUser] = useLocalStorage('user')
 
+   const logout = () => {
+      localStorage.removeItem('user')
+      setUser(null)
+   }
+
    return (
-      <userContext.Provider value={{user, setUser}}>
+      <userContext.Provider value={{user, setUser, logout}}>
          {children}
       </userContext.Provider>
    )

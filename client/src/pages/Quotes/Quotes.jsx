@@ -13,7 +13,7 @@ const Quotes = () => {
    const { loading, error, getQuotes } = useGetQuotes()
    const { loading: tagLoading, error: tagError, getTags } = useGetTags()
    const { quotes } = useQuotes()
-   const {user} = useUser()
+   const {user, logout} = useUser()
    const [ currPage, setCurrPage ] = useState(1)
    const [filter, setFilter] = useState(null)
    const {tag} = useTags()
@@ -35,6 +35,13 @@ const Quotes = () => {
 
    return ( 
       <div className="bg-clr-neutral-300 quotes-wrapper">
+      {user?.accessToken && 
+      <button className="align-right header"
+              onClick={ () => {
+               logout()
+               navigate('/')
+              } }
+      ><span className="fs-body ff-wix">Log out</span> <FaAngleRight/></button>}
          <div className="quotes-container">
          <div className="filter">
             <p className="ff-wix fs-header3">Filter by tag: </p>
