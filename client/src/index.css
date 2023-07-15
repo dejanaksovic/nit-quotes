@@ -72,6 +72,14 @@ html {
   color: var(--clr-neutral-900);
 }
 
+.clr-error {
+  color: var(--clr-error)
+}
+
+.clr-success {
+  color: var(--clr-success)
+}
+
 .bg-clr-primary {
   background-color: var(--clr-primary);
 }

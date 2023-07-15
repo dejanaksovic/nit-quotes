@@ -5,28 +5,32 @@ import { useGetQuotes } from "../../hooks/useGetQuotes";
 import { useQuotes } from "../../hooks/useQuotes";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useTags } from "../../hooks/useTags";
-import Chip from "../../components/Chip/Chip";
 import { useGetTags } from "../../hooks/useGetTags";
+import { useUser } from "../../hooks/useUser";
+import { useNavigate } from "react-router-dom"
 
 const Quotes = () => {
    const { loading, error, getQuotes } = useGetQuotes()
    const { loading: tagLoading, error: tagError, getTags } = useGetTags()
    const { quotes } = useQuotes()
+   const {user} = useUser()
    const [ currPage, setCurrPage ] = useState(1)
    const [filter, setFilter] = useState(null)
    const {tag} = useTags()
    const maxPage = 5
    const pageSize = 3
+   const navigate = useNavigate()
 
    useEffect( () => {
-      const searchParams = {page: currPage, pageSize, filter}
+      const searchParams = {page: currPage, pageSize, ...(filter ? { tags: filter} : {}) }
       getQuotes(searchParams)
       
-   },[])
+   },[filter, currPage])
 
    useEffect( () => {
+      if(!user?.accessToken)
+         return navigate('/login')
       getTags()
-      console.log(tag);
    }, [] )
 
    return ( 
@@ -35,6 +39,7 @@ const Quotes = () => {
          <div className="filter">
             <p className="ff-wix fs-header3">Filter by tag: </p>
             <select name="" onChange={ e => {setFilter(e.target.value)} } id="">
+               <option value={null}>none</option>
             {
                tag?.map( tag => <option value={tag} key={tag}>{tag}</option> )
             }
@@ -59,7 +64,7 @@ const Quotes = () => {
                </div>
             {
                [currPage-1 || null, currPage, quotes?.length >= pageSize ? currPage+1 : null ].map( pag => {
-                  return  pag && <div className="pag-item clr-primary fs-subtitle1 fw-bold"
+                  return  pag && <div key={pag} className="pag-item clr-primary fs-subtitle1 fw-bold"
                   onClick = { e => {
                      setCurrPage(pag)
                   } }

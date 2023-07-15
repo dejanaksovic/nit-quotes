@@ -16,7 +16,7 @@ export const useGetQuotes = () => {
                Authorization: `Bearer ba13533b-e275-45a2-bc2e-b3098036d655`
             }
          })
-         console.log(`${import.meta.env.VITE_SERVER_URL}/quotes${params ? `${params.toString()}` : ''}`);
+         console.log(`${import.meta.env.VITE_SERVER_URL}/quotes${params ? `?${params.toString()}` : ''}`);
          console.log(res);
          fetchQuotes(res.data.quotes)
       }
